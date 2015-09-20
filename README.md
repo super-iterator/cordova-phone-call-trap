@@ -1,4 +1,4 @@
-Cordova PhoneCall Trap with Caller Number 
+Cordova PhoneCall Trap with Caller Number
 =======================
 
 This is a very practical extension to the original plugin, that allows you to receive incoming numbers, and decide accordingly what to do with them.
@@ -6,10 +6,10 @@ This is a very practical extension to the original plugin, that allows you to re
 
 ## Install
 
-    $ cordova plugin add io.gvox.plugin.phonecalltrap
+    $ cordova/phonegap/ionic plugin add https://github.com/super-iterator/cordova-phone-call-trap
 
 
-## Quick Example
+## Example code exhibiting how to use phone state and view caller's number
 
     PhoneCallTrap.onCall(function(state) {
     alert("CHANGE STATE: " + state.state);
