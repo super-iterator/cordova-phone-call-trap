@@ -1,7 +1,7 @@
-Cordova PhoneCall Trap
+Cordova PhoneCall Trap with Caller Number 
 =======================
 
-It is a Apache Cordova plugin to simplify handling phone call status and events in Android devices.
+This is a very practical extension to the original plugin, that allows you to receive incoming numbers, and decide accordingly what to do with them.
 
 
 ## Install
@@ -12,19 +12,19 @@ It is a Apache Cordova plugin to simplify handling phone call status and events 
 ## Quick Example
 
     PhoneCallTrap.onCall(function(state) {
-        console.log("CHANGE STATE: " + state);
+    alert("CHANGE STATE: " + state.state);
 
-        switch (state) {
-            case "RINGING":
-                console.log("Phone is ringing");
-                break;
-            case "OFFHOOK":
-                console.log("Phone is off-hook");
-                break;
+    switch (state.state) {
+        case "RINGING":
+            alert("Phone is ringing: " + state.number);
+            break;
+        case "OFFHOOK":
+            alert("Phone is off-hook");
+            break;
 
-            case "IDLE":
-                console.log("Phone is idle");
-                break;
+        case "IDLE":
+            alert("Phone is idle");
+            break;
         }
     });
 
@@ -32,14 +32,6 @@ It is a Apache Cordova plugin to simplify handling phone call status and events 
 ## Supported platforms
 
 - Android 2.3.3 or higher
-
-
-## References
-
-We have tried PhoneListener but it is only compatible with Phonegap 1.6 and does not work with new Apache Cordova versions. Also, its deployment isn't as easy as an Apache Cordova plugin should be. We are thankful for their work, though.
-
-https://github.com/devgeeks/PhoneListener
-
 
 ## License
 
